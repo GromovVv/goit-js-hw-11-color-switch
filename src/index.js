@@ -12,11 +12,15 @@ const colors = [
   const refs = {
       body: document.querySelector('body'),
       startBtn: document.querySelector(`[data-action="start"]`),
-      stopBtn: document.querySelector(`[data-action="stop"]`)
+      stopBtn: document.querySelector(`[data-action="stop"]`),
+      divWrap: document.querySelector('.wrapper')
+
   }
   
   let intervalId = null;
   
+  refs.divWrap.style.backgroundColor = 'black'
+
   refs.startBtn.addEventListener('click', startChange);
   refs.stopBtn.addEventListener('click', stopChange);
   
